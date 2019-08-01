@@ -5,7 +5,7 @@ const $goto = document.querySelector('#box .goto')
 const $synopsis = document.querySelector('#box .synopsis')
 const $loading = document.querySelector('.loading')
 
-const randomUri = 'http://dbug.mx/random'
+const randomUri = 'https://dbug.mx/random'
 
 fetch(randomUri)
     .then(blob => blob.json())
