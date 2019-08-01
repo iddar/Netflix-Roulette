@@ -1,0 +1,122 @@
+body {
+    background: #aa4b6b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: #2a2c2e;
+}
+
+#box {
+    background: rgba(33, 33, 33, 1);
+    
+    background-size: cover;
+    color: white;
+    
+    border: solid 1px #2a2c2e;
+    padding: 20px;
+    border-radius: 7px;
+    height: 466px;
+    width: 336px;
+    display: flex;
+    align-items: center;
+    box-shadow: #000000 0px 0px 2px  2px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#box:before {
+    content: "";
+    position: fixed;
+    z-index: 0;
+  
+    display: block;
+    background-size:cover;
+    height: 466px;
+    width: 336px;
+  
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    opacity: .4;
+  }
+
+#box>div {
+    flex: 1;
+    z-index: 2;
+}
+
+#box img {
+    border-radius: 3px;
+    border: solid 1px white;
+    margin: 0 auto;
+    display: block;
+}
+
+.title {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.synopsis {
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
+#box a.link, #box a.link:visited {
+    color: #ffffff;
+    text-align: center;
+    flex: 1;
+    font-size: .8rem;
+    
+    display: block;
+}
+
+.goto {
+    background: rgb(229,9,20);
+    color: #ffffff;
+    
+    display: block;
+    width: 165px;
+    
+    margin: 30px auto 15px auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+    
+    font-size: .8rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
