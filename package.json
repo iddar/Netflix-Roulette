@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm build:server",
+    "build": "npm run build:server",
     "build:server": "netlify-lambda build ./lambda",
     "start": "concurrently 'npm run start:client' 'npm run start:server'",
     "start:client": "live-server client/",
