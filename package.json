@@ -4,12 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "live-server"
+    "build": "npm build:server",
+    "build:server": "netlify-lambda build ./lambda",
+    "start": "concurrently 'npm run start:client' 'npm run start:server'",
+    "start:client": "live-server client/",
+    "start:server": "netlify-lambda serve ./lambda -c webpack.server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "live-server": "^1.2.1",
+    "netlify-lambda": "^2.0.1"
+  },
+  "dependencies": {
+    "mongodb": "^3.5.9",
+    "node-fetch": "^2.6.0"
   }
 }

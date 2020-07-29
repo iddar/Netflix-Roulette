@@ -1,0 +1,10 @@
+
+[build]
+  command = "yarn build"
+  publish = "client/"
+  functions = "serv/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

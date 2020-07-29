@@ -5,7 +5,12 @@ const $goto = document.querySelector('#box .goto')
 const $synopsis = document.querySelector('#box .synopsis')
 const $loading = document.querySelector('.loading')
 
-const randomUri = 'https://dbug.mx/random'
+
+const baseURL = location.port === "8080" 
+  ? 'http://localhost:9000/.netlify/functions'
+  : '/.netlify/functions'
+
+  const randomUri = `${baseURL}/random`
 
 fetch(randomUri)
     .then(blob => blob.json())

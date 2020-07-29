@@ -1,1 +1,9 @@
+.env
 node_modules
+
+# netlify-lambda generate
+serv
+
+# Output files
+*.tgz
+*.zip
